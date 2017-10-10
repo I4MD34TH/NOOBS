@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import $ from 'jquery'
-import '/css/bootstrap.min.css'
-import '/js/bootstrap.min.js'
+import 'jquery/src/jquery'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 import './index.css'
 
 const Header = () => (
@@ -73,6 +73,7 @@ const TemplateWrapper = ({ children }) => (
   <div style={{'position':'relative', 'z-index':'1',}}>
     <Helmet title="Gatsby Default Starter" meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' },]}/>
     <Header />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <div>
       {children()}
     </div>
