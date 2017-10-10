@@ -40,7 +40,7 @@ export default class IndexPage extends React.Component {
   render () {
     return (
       <div>
-          <section className={'search-section'} style={{'height':'100vh', 'background-color': '#75ce69', 'background-image': 'url(images/header_background.jpg)', 'background-position': 'bottom', 'z-index':'2', 'box-shadow':'0px 3px 15px rgb(0,0,0,0.2)'}}>
+          <section className={'search-section'} style={{'height':'100vh', 'background-color': '#75ce69', 'background-image': 'url(images/header_background.jpg)', 'background-position': 'bottom', 'z-index':'2',}}>
               <div className={'text-center'}>
                   <h1 className={'search-section-heading-1'} style={{'margin-top':'0px', 'padding-top':'24vh', 'color':'white', 'letter-spacing':'-2px',}}><strong>Looking for a Home? - We can Help!</strong></h1>
                   <h1 className={'search-section-heading-2 text-center'} style={{'margin-top':'0px', 'padding-top':'20vh', 'color':'white', 'letter-spacing':'-2px',}}><strong>Looking for a Home? <br /> We can Help!</strong></h1>
@@ -64,7 +64,7 @@ export default class IndexPage extends React.Component {
                   <figure><img className={'col-sm-3 tick'} src={'images/tick.png'} /><div className={'col-sm-9'}><h3><strong>Find what you want</strong></h3><p>Impetus oportere prodesset his ut, fabellas tincidunt qui te. Sit porro adversarium ea. An usu nullam noster rationibus, agam dicam eu nec, audire comprehensam ut eos. Per sumo theophrastus et, ne mazim erroribus liberavisse has.</p></div></figure>
                   <figure><img className={'col-sm-3 tick'} src={'images/tick.png'} /><div className={'col-sm-9'}><h3><strong>Buy your dream property</strong></h3><p>Impetus oportere prodesset his ut, fabellas tincidunt qui te. Sit porro adversarium ea. An usu nullam noster rationibus, agam dicam eu nec, audire comprehensam ut eos. Per sumo theophrastus et, ne mazim erroribus liberavisse has.</p></div></figure>
               </div>
-              <div className={'container-fluid graded'} style={{'padding':'3vh 10vw 3vh 10vw', 'color':'white', 'margin-top':'50px', 'box-shadow':'0px 3px 15px rgb(0,0,0,0.25)'}}>
+              <div className={'container-fluid graded'} style={{'padding':'3vh 10vw 3vh 10vw', 'color':'white', 'margin-top':'50px',}}>
                   <h1><strong>A Game Changer - In Real Estate Agency of Pakistan</strong></h1><button className={'contact-btn'}><strong>Contact Us</strong></button>
               </div>
           </section>

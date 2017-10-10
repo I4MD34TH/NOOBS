@@ -1,5 +1,10 @@
 .search-section {
     background-size: 100vw auto;
+    box-shadow: 0px 3px 15px rgb(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 15px rgb(0,0,0,0.25);
+    -webkit-box-shadow: 0px 3px 15px rgb(0,0,0,0.25);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='rgb(0,0,0,0.25)')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='rgb(0,0,0,0.25)');
 }
 .navbar-brand {
     height: 75px;
@@ -56,6 +61,13 @@
     margin-top: 20px;
     float: right;
 }
+.graded {
+    box-shadow: 0px 3px 15px rgb(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 15px rgb(0,0,0,0.25);
+    -webkit-box-shadow: 0px 3px 15px rgb(0,0,0,0.25);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='rgb(0,0,0,0.25)')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='rgb(0,0,0,0.25)');
+}
 .graded h1 {
     margin-top: 3vh;
     margin-bottom: 3vh;
@@ -73,6 +85,11 @@
 }
 .tile {
     width: 24vw;
+    box-shadow: 0px 3px 15px rgb(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 15px rgb(0,0,0,0.25);
+    -webkit-box-shadow: 0px 3px 15px rgb(0,0,0,0.25);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='rgb(0,0,0,0.25)')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='rgb(0,0,0,0.25)');
 }
 .inner-tile {
     margin: 0px 20px 0px 20px;

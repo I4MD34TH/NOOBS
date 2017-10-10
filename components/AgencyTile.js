@@ -3,7 +3,7 @@ import React from 'react'
 export default class PropertyTile extends React.Component {
   render() {
     return (
-        <div className={'tile'} style={{'box-shadow':'0px 3px 15px rgb(0,0,0,0.2)',}}>
+        <div className={'tile'}>
             <img className={'img-responsive'} src={this.props.data.imgUrl} />
             <div className={'inner-tile'}>
                 <h3 style={{'color':'#555555',}}>{this.props.data.title}</h3>

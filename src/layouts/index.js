@@ -71,7 +71,7 @@ const Footer = () => (
 
 const TemplateWrapper = ({ children }) => (
   <div style={{'position':'relative', 'z-index':'1',}}>
-    <Helmet title="Gatsby Default Starter" meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' },]}/>
+    <Helmet title="Agency 21" meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' },]}/>
     <Header />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <div>
