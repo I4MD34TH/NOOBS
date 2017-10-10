@@ -9,6 +9,9 @@ export default class IndexPage extends React.Component {
       listingsData: [],
     }
   }
+  navigate =  ()=> {
+    window.location='/page-3'
+  }
   componentDidMount() {
     var listingsData = [
       {
@@ -49,16 +52,16 @@ export default class IndexPage extends React.Component {
                       <input type={'search'} placeholder={'City'} style={{'border-radius':'5px 0px 0px 5px', 'width':'200px',}}/>
                       <input type={'search'} placeholder={'Area'} style={{'border-left':'1px solid #d8d8d8', 'width':'250px',}} />
                       <input type={'search'} placeholder={'Type'} style={{'border-left':'1px solid #d8d8d8', 'width':'250px',}} />
-                      <button className={'input-submit'} type={'submit'} style={{'border-left':'1px solid #d8d8d8', 'width':'150px',}}>Buy</button>
-                      <button className={'input-submit'} type={'submit'} style={{'border-left':'1px solid #8e8e8e', 'border-radius':'0px 5px 5px 0px', 'width':'150px',}}>Rent</button>
+                      <button onClick={this.navigate} className={'input-submit'} type={'submit'} style={{'border-left':'1px solid #d8d8d8', 'width':'150px',}}>Buy</button>
+                      <button onClick={this.navigate} className={'input-submit'} type={'submit'} style={{'border-left':'1px solid #8e8e8e', 'border-radius':'0px 5px 5px 0px', 'width':'150px',}}>Rent</button>
                   </div>
               </div>
           </section>
-          <section className={'about-section text-center'}>
+          <section id={'AboutUs'} className={'about-section text-center'}>
               <h1 className={'about-heading'} style={{'letter-spacing':'3px', 'color':'#595959',}}><strong>ABOUT US</strong></h1>
               <p className={'about-para'} style={{'color':'#5b5b5b', 'width':'75vw', 'margin':'auto', 'line-height': '180%',}}>Impetus oportere prodesset his ut, fabellas tincidunt qui te. Sit porro adversarium ea. An usu nullam noster rationibus, agam dicam eu nec, audire comprehensam ut eos. Per sumo theophrastus et, ne mazim erroribus liberavisse has. Ius te eros timeam. Percipit disputando ea ius, rebum ancillae mei at. An est novum iusto nonumes. Sea animal consequat torquatos ne, probo noluisse accusata ne nec. Mel ut melius oporteat, has ea copiosae consulatu incorrupte.</p>
               <img className={'about-img'} src={'images/about_img.png'} />
-              <h1 className={'work-heading'} style={{'letter-spacing':'3px', 'color':'#595959',}}><strong>SEE HOW IT WORKS</strong></h1>
+              <h1 id={'HowItWorks'} className={'work-heading'} style={{'letter-spacing':'3px', 'color':'#595959',}}><strong>SEE HOW IT WORKS</strong></h1>
               <div className={'work-steps'}>
                   <figure><img className={'col-sm-3 tick'} src={'images/tick.png'} /><div className={'col-sm-9'}><h3><strong>Choose what to do</strong></h3><p>Impetus oportere prodesset his ut, fabellas tincidunt qui te. Sit porro adversarium ea. An usu nullam noster rationibus, agam dicam eu nec, audire comprehensam ut eos. Per sumo theophrastus et, ne mazim erroribus liberavisse has.</p></div></figure>
                   <figure><img className={'col-sm-3 tick'} src={'images/tick.png'} /><div className={'col-sm-9'}><h3><strong>Find what you want</strong></h3><p>Impetus oportere prodesset his ut, fabellas tincidunt qui te. Sit porro adversarium ea. An usu nullam noster rationibus, agam dicam eu nec, audire comprehensam ut eos. Per sumo theophrastus et, ne mazim erroribus liberavisse has.</p></div></figure>
@@ -68,7 +71,8 @@ export default class IndexPage extends React.Component {
                   <h1><strong>A Game Changer - In Real Estate Agency of Pakistan</strong></h1><button className={'contact-btn'}><strong>Contact Us</strong></button>
               </div>
           </section>
-          <section className={'container-fluid'} style={{'padding':'0px',}}>
+          <section style={{'margin':'20px 0px 20px 0px'}}></section>
+          <section className={'container-fluid'} style={{'padding':'0px', 'display':'none',}}>
               <h1 className={'tile-heading text-center'}><strong>LISTED PROPERTIES</strong></h1>
               <div className={'container-fluid tiles'} style={{'display':'flex', 'flex-wrap':'wrap', 'margin-left':'auto', 'margin-right':'auto', 'margin-bottom':'70px',}}>
                 {this.state.listingsData.map((listing, index)=>{

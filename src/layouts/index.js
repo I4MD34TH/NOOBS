@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import './index.css'
 
+
 const Header = () => (
   <section className={'header'} style={{'position':'absolute', 'z-index':'3', 'width':'100%',}}>
       <div className={'container-fluid'}>
@@ -19,9 +20,9 @@ const Header = () => (
               </div>
               <div className={'collapse navbar-collapse'} id={'header-navbar'}>
                   <ul className={'nav navbar-nav navbar-right'} style={{'margin-top':'15px', 'font-size':'15px',}}>
-                      <li><a>ABOUT</a></li>
+                      <li><a onClick={'#AboutUs'}>ABOUT</a></li>
                       <li><a>PROPERTY LISTINGS</a></li>
-                      <li><a>HOW IT WORKS</a></li>
+                      <li><a onClick={'#HowItWorks'}>HOW IT WORKS</a></li>
                       <li><a>CONTACT</a></li>
                   </ul>
               </div>
@@ -39,9 +40,9 @@ const Footer = () => (
           </div>
           <div className={'col-sm-2'}>
               <h3 style={{'margin-bottom':'20px',}}>Agency 21</h3>
-              <a className={'short-footer-links'}>About Us</a><br />
+              <a className={'short-footer-links'} onClick={'#AboutUs'}>About Us</a><br />
               <a className={'short-footer-links'}>Property Listings</a><br />
-              <a className={'short-footer-links'}>How it works</a><br />
+              <a className={'short-footer-links'} onClick={'#HowItWorks'}>How it works</a><br />
               <a className={'short-footer-links'}>Contact</a>
           </div>
           <div className={'col-sm-3 office'}>
@@ -73,7 +74,6 @@ const TemplateWrapper = ({ children }) => (
   <div style={{'position':'relative', 'z-index':'1',}}>
     <Helmet title="Agency 21" meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' },]}/>
     <Header />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <div>
       {children()}
     </div>
