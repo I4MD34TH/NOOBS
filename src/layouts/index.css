@@ -28,6 +28,33 @@ p {
 .navbar {
     margin: 15px 30px 0px 30px;
 }
+.navbar .container {
+    width: 85%;
+}
+.navbar-nav > li > a {
+    color: white !important;
+}
+.navbar-nav > li > a:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+.navbar-default .navbar-toggle {
+    border: 1px solid #fff !important;
+    border-radius: 0px !important;
+    background: transparent !important;
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+.navbar-default .navbar-toggle:hover {
+    background: white !important;
+    border: none !important;
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
+    transform: scale(1.02);
+    transition: 0.1s ease;
+}
 .search-section-heading-1 {
     font-size: 45px;
 }
@@ -47,7 +74,7 @@ p {
     font-size: 18px;
 }
 .about-img {
-    width: 75vw;
+    width: 85%;
     margin-top: 9vh;
     margin-bottom: 12vh;
 }
@@ -55,8 +82,8 @@ p {
     font-size: 35px;
     margin-top: 5vh;
 }
-.tick {
-    width: 60px;
+.col-sm-3.tick {
+    width: 24px;
     position: relative;
     margin-top: 20px;
     padding-right: 0px;
@@ -64,18 +91,27 @@ p {
 .work-steps {
     padding-top: 5vh;
 }
-.work-steps figure p {
+.work-steps p {
+    text-align: left;
+    color: #5d5d5d;
     font-size: 16px;
 }
+.work-steps h3 {
+    text-align: left;
+    font-size: 20px;
+}
+.work-steps img {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 10px;
+}
 .contact-btn {
-    height: 50px;
+    margin-top: 2.3vh;
+    height: 41px;
     width: 200px;
-    border: 2px solid white;
+    border: 1px solid white;
     background-color: transparent;
     font-size: 17px;
-    border-radius: 5px;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
     float: right;
 }
 .graded {
@@ -86,8 +122,8 @@ p {
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='rgb(0,0,0,0.25)');
 }
 .graded h1 {
-    margin-top: 4.5vh;
-    margin-bottom: 3vh;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
     float: left;
     font-size: 33px;
 }
@@ -114,12 +150,6 @@ p {
 .common-details img {
     float: left;
     margin-right: 10px;
-}
-figure {
-    width: 30vw;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
 }
 figure h3 {
     color: #595959;
@@ -191,16 +221,16 @@ figure p {
 }
 @media only screen and (max-width: 1366px) {
     .graded h1 {
+        margin-top: 3.7vh;
         font-size: 26px;
     }
     .contact-btn {
-        height: 50px;
+        height: 45px;
         width: 200px;
-        border: 2px solid white;
+        border: 1px solid white;
         background-color: transparent;
         font-size: 16px;
-        border-radius: 5px;
-        margin-top: 3vh;
+        margin-top: 2.3vh;
         margin-bottom: 2vh;
     }
     .contact-btn:hover {
@@ -225,10 +255,18 @@ figure p {
     .tile {
         width: 37vw;
     }
+    .footer-para {
+        width: 250px;
+    }
+    .footer p {
+        padding: 0px 15px 0px 0px;
+        margin-left: 0px;
+        font-size: 13px;
+    }
 }
 @media only screen and (max-width: 1200px) {
     .search-section {
-        background-size: auto 110vh;
+        background-size: cover;
     }
     .graded h1 {
         font-size: 22px;
@@ -236,10 +274,9 @@ figure p {
     .contact-btn {
         height: 40px;
         width: 180px;
-        border: 2px solid white;
+        border: 1px solid white;
         background-color: transparent;
         font-size: 15px;
-        border-radius: 5px;
         margin-top: 3vh;
         margin-bottom: 2vh;
     }
@@ -257,22 +294,24 @@ figure p {
     .input-field{
         display: none;
     }
-    .footer-para {
-        width: 250px;
-    }
     .comingsoon-heading {
         font-size: 48px;
     }
     .comingsoon-para {
         font-size: 20px;
     }
-    .footer p {
-        padding: 0px 15px 0px 0px;
-        margin-left: 0px;
-        font-size: 13px;
+}
+@media only screen and (max-width: 990px) {
+    .graded h1 {
+        float: none;
+    }
+    .contact-btn {
+        float: none;
+    }
+    .footer .col-xs-9 {
+        width: 50%;
     }
 }
-
 @media only screen and (max-width: 960px) {
     .search-section-para {
         width: 60vw;
@@ -301,6 +340,9 @@ figure p {
     }
     .tile {
         width: 44vw;
+    }
+    .navbar .container {
+        width: 95%;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -335,9 +377,13 @@ figure p {
         margin-right: 5px;
     }
     .work-steps {
+        width: auto;
         margin-top: 5vh;
         padding-left: 10px;
         padding-right: 10px;
+    }
+    .work-steps .col-xs-6 {
+        width: auto;
     }
     .work-steps figure {
         width: auto;
@@ -345,8 +391,10 @@ figure p {
     .work-steps figure h3 {
         font-size: 18px;
     }
-    .work-steps figure p {
+    .work-steps .col-xs-6 p {
         font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
         margin-bottom: 10px;
     }
     .tile-heading {
@@ -372,6 +420,9 @@ figure p {
     }
     .contact-btn:hover {
         font-size: 15px;
+    }
+    .footer .col-xs-6, .footer .col-xs-3, .footer .col-xs-4 {
+        width: auto;
     }
     .footer-logo {
         height: 45px;
@@ -404,21 +455,38 @@ figure p {
         font-size: 18px;
     }
 }
+@media only screen and (max-width: 767px) {
+      .navbar-nav > li > a {
+          color: #5fc670 !important;
+      }
+      .navbar-nav > li > a:hover {
+          background-color: white !important;
+      }
+      .navbar-nav > li > a:hover {
+          transform: scale(1.02);
+          transition: 0.3s ease;
+      }
+}
 @media only screen and (max-width: 760px) {
     .nav a {
         background-color: white;
         color: #5fba5b;
     }
 }
+@media only screen and (max-width: 495px) {
+    .col-sm-3.tick {
+        width: 30px;
+    }
+}
+@media only screen and (max-width: 462px) {
+    .footer .col-xs-9 {
+        width: auto;
+    }
+}
 @media only screen and (max-width: 320px) {
     .office div img {
         margin-bottom: 10px;
     }
-}
-html, body {
-    max-width: 1920px;
-    margin-right: auto;
-    margin-left: auto;
 }
 body, a {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -505,11 +573,12 @@ input, .input-submit {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ed15c', endColorstr='#78bc79',GradientType=1 );
 }
 .short-footer-links {
+    color: white;
     line-height: 250%;
 }
 .short-footer-links:hover {
-    color: #5fba5b;
-    transition: 0.3s ease;
+    color: #5fba5b !important;
+    transition: 0.3s ease !important;
 }
 .copy-right:before {
     background: none repeat scroll 0 0 #606060;
