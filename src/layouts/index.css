@@ -687,7 +687,7 @@ button.bkgrad {
 }
 button.bkgrad:hover {
     background: #ddd;
-    color: black;
+    color: #595959;
 }
 button.prop-btns {
   font-size: 12px;

@@ -99,6 +99,9 @@ export default class PropertyDetails extends React.Component {
               )
             })}
           </Row>
+          <Row>
+            <iframe width={665} height={450} frameborder={0} style={{"border":"0", 'margin-top':'30px', }} src={"https://www.google.com/maps/embed/v1/place?key=AIzaSyCcHOD6AxKpd0gHp6ivvBuKL1y_0v41qWg&q=Space+Needle,Seattle+WA"} allowfullscreen></iframe>
+          </Row>
         </Col>
       </Grid>
     )
