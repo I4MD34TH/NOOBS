@@ -6,45 +6,70 @@ import { Nav, Navbar, NavItem, NavDropdown, MenuItem, Grid, Col, Row } from 'rea
 import Scrollchor from 'react-scrollchor';
 import firebase from 'firebase'
 
-import './index.css'
+import '../layouts/index.css'
 
-class Header extends React.Component {
+{/*class Header extends React.Component {
   navigate =  ()=> {
     window.location='../page-2'
   }
   navigatehome =  ()=> {
     window.location='../'
   }
-  render() {
-    return (
-        <section className={'header'} style={{'position':'absolute', 'z-index':'3', 'width':'100%',}}>
-            <Navbar className={'navbar'} style={{'background-color':'transparent', 'border':'none',}}>
-              <Navbar.Header>
-                <Navbar.Brand>
-                    <img onClick={this.navigatehome} src={'../images/logo-header.png'} style={{'height':'70px', 'cursor':'pointer',}} />
-                </Navbar.Brand>
-                <Navbar.Toggle />
-              </Navbar.Header>
-                <Navbar.Collapse>
-                    <Nav pullRight className={'main-nav'} pullRight style={{'margin-top':'5px', 'color': '#fff',}}>
-                        <li><Scrollchor to={'#AboutUs'}>ABOUT</Scrollchor></li>
-                        <li><a onClick={this.navigate}>PROPERTY LISTINGS</a></li>
-                        <li><Scrollchor to={'#HowItWorks'}>HOW IT WORKS</Scrollchor></li>
-                        <li><a onClick={this.navigate}>CONTACT</a></li>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-        </section>
-      )
-    }
+  navigateListings = ()=> {
+    window.location='../PropertyListings'
   }
+  render() {
+      return (
+          <section className={'header'} style={{'position':'absolute', 'z-index':'3', 'width':'100%',}}>
+              <Navbar className={'navbar'} style={{'background-color':'transparent', 'border':'none',}}>
+                <Navbar.Header>
+                  <Navbar.Brand>
+                      <img onClick={this.navigatehome} src={'../images/logo-header.png'} style={{'height':'70px', 'cursor':'pointer',}} />
+                  </Navbar.Brand>
+                  <Navbar.Toggle />
+                </Navbar.Header>
+                  <Navbar.Collapse>
+                      <Nav pullRight className={'main-nav'} pullRight style={{'margin-top':'5px', 'color': '#fff',}}>
+                          <li><Scrollchor to={'#AboutUs'}>ABOUT</Scrollchor></li>
+                          <li><a onClick={this.navigateListings}>PROPERTY LISTINGS</a></li>
+                          <li><Scrollchor to={'#HowItWorks'}>HOW IT WORKS</Scrollchor></li>
+                          <li><a onClick={this.navigate}>CONTACT</a></li>
+                      </Nav>
+                  </Navbar.Collapse>
+              </Navbar>
+          </section>
+          /*<section className={'header'} style={{'width':'100%',}}>
+              <Navbar className={'navbar'} style={{'background-color':'transparent', 'border':'none',}}>
+                <Navbar.Header>
+                  <Navbar.Brand>
+                      <img onClick={this.navigatehome} src={'../images/footer-logo.png'} style={{'height':'70px', 'cursor':'pointer',}} />
+                  </Navbar.Brand>
+                  <Navbar.Toggle />
+                </Navbar.Header>
+                  <Navbar.Collapse>
+                      <Nav pullRight className={'main-nav'} pullRight style={{'margin-top':'5px', 'color': '#fff',}}>
+                          <li><a onClick={this.navigatehome}>ABOUT</a></li>
+                          <li><Scrollchor to={'#property'}>PROPERTY LISTINGS</Scrollchor></li>
+                          <li><a onClick={this.navigatehome}>HOW IT WORKS</a></li>
+                          <li><a onClick={this.navigate}>CONTACT</a></li>
+                      </Nav>
+                  </Navbar.Collapse>
+              </Navbar>
+          </section>/
+      );
+  }
+}
+*/}
 
 class Footer extends React.Component {
-    navigate =  ()=> {
+    navigate = ()=> {
       window.location='../page-2'
     }
-    navigatehome =  ()=> {
+    navigatehome = ()=> {
       window.location='../'
+    }
+    navigateListings = ()=> {
+      window.location='../PropertyListings'
     }
     render() {
       return (
@@ -58,7 +83,7 @@ class Footer extends React.Component {
                 <Col xs={'3'} md={'2'}>
                     <h3 style={{'margin-bottom':'20px',}}>Agency 21</h3>
                     <Scrollchor to={'#AboutUs'} className={'short-footer-links'}>About Us</Scrollchor><br />
-                    <a className={'short-footer-links'} onClick={this.navigate}>Property Listings</a><br />
+                    <a className={'short-footer-links'} onClick={this.navigateListings}>Property Listings</a><br />
                     <Scrollchor to={'#HowItWorks'} className={'short-footer-links'}>How it works</Scrollchor><br />
                     <a className={'short-footer-links'} onClick={this.navigate}s>Contact</a>
                 </Col>
@@ -95,9 +120,10 @@ const TemplateWrapper = ({ children }) => (
     <Helmet title="Agency 21" meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' },]}>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
       <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" />
     </Helmet>
-    <Header />
-    <div>
+    {/*<Header />*/}
+    <div style={{"font-family": "'Open Sans', sans-serif",}}>
       {children()}
     </div>
     <Footer/>

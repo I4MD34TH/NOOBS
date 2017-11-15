@@ -1,15 +1,24 @@
 import React from 'react'
 
 export default class PropertyTile extends React.Component {
+  navigatedetails = ()=> {
+    window.location='../PropertyPage'
+  }
   render() {
     return (
-        <div className={'tile'}>
+        <a onClick={this.navigatedetails} className={'tile'} style={{'cursor':'pointer', 'text-decoration':'none', }}>
             <img className={'img-responsive'} src={this.props.data.imgUrl} />
             <div className={'inner-tile'}>
-                <h3 style={{'color':'#555555',}}>{this.props.data.title}</h3>
-                <p style={{'color':'#999999', 'padding-bottom':'20px',}}>{this.props.data.location}</p>
-                <div className={'row container-fluid'}><p className={'pull-left'} style={{'color':'#999999',}}>Details:</p><p className={'pull-left'} style={{'margin-left':'5px',}}>{this.props.data.area}</p></div>
-                <div className={'row container-fluid'}><p className={'pull-left'} style={{'color':'#999999',}}>Status: </p><p className={'pull-left'} style={{'margin-left':'5px',}}>{this.props.data.status}</p></div>
+                <h3>{this.props.data.title}</h3>
+                <p class={'loc-tile'} style={{'padding-bottom':'20px', }}>{this.props.data.location}</p>
+                <div className={'row sm-details container-fluid'}>
+                  <p className={'pull-left dt'}>Details:</p>
+                  <p className={'pull-left'} style={{'margin-left':'5px',}}>{this.props.data.area}</p>
+                </div>
+                <div className={'row sm-details container-fluid'}>
+                  <p className={'pull-left dt'}>Status: </p>
+                  <p className={'pull-left'} style={{'margin-left':'5px',}}>{this.props.data.status}</p>
+                </div>
                 <div className={'row common-details'} style={{'padding-top':'20px'}}>
                     <div className={'col-sm-4'}>
                         <img src={'images/bed-icon.png'} style={{'width':'25px',}} />
@@ -24,9 +33,9 @@ export default class PropertyTile extends React.Component {
                         <p style={{'margin-left':'8px',}}>{this.props.data.garage} garage</p>
                     </div>
                 </div>
-                <a className={'details-link'} style={{'line-height':'500%',}}>View details</a>
+                <p style={{'line-height':'350%', 'margin-bottom':'0px', }}>View details</p>
             </div>
-        </div>
+        </a>
     )
   }
 }
