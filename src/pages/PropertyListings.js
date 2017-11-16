@@ -95,8 +95,8 @@ export default class PropertyListings extends React.Component {
         </section>
         <section id={'property'} className={'search-section listing-search'} style={{'background-color': '#75ce69', 'z-index':'2',}}>
             <div className={'text-center'}>
-                <h1 className={'search-section-heading-1'} style={{'margin-top':'0px', 'padding-top':'20vh', 'color':'white', 'letter-spacing':'1px',}}><strong>Looking for a Home? - We can Help!</strong></h1>
-                <h1 className={'search-section-heading-2 text-center'} style={{'margin-top':'0px', 'padding-top':'20vh', 'color':'white', 'letter-spacing':'1px', 'word-spacing':'2px',}}><strong>Looking for a Home? <br /> We can Help!</strong></h1>
+                <h1 className={'search-section-heading-1'} style={{'margin-top':'0px', 'padding-top':'15vh', 'color':'white', 'letter-spacing':'1px',}}><strong>Looking for a Home? - We can Help!</strong></h1>
+                <h1 className={'search-section-heading-2 text-center'} style={{'margin-top':'0px', 'padding-top':'15vh', 'color':'white', 'letter-spacing':'1px', 'word-spacing':'2px',}}><strong>Looking for a Home? <br /> We can Help!</strong></h1>
                 <p className={'search-section-para'} style={{'color':'white', 'margin':'auto', 'line-height': '150%', 'letter-spacing':'4px', 'word-spacing':'4px', 'font-weight':'300',}}>Pakistan’s Leading Real Estate Brand</p>
                 <Grid className={'input-field'} style={{'font-size':'18px', 'padding-left':'0px', 'padding-right':'0px', }}>
                   <Col md={2} style={{'padding-left':'0px', 'padding-right':'0px', }}>

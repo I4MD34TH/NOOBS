@@ -27,7 +27,7 @@ export default class PropertyDetails extends React.Component {
   render() {
     return (
       <Grid className={'details'} style={{'padding-top':'40px', 'padding-bottom':'40px', }}>
-        <Col xs={6} md={4}>
+        <Col xs={12} md={4}>
           <Row style={{'padding':'5px', }}>
             <img className={'img-responsive'} src={this.props.data.imgUrl[0]} />
           </Row>
@@ -40,12 +40,12 @@ export default class PropertyDetails extends React.Component {
             <Button className={'bkgrad'}><strong>CALL US FOR MORE DETAILS</strong></Button>
           </Row>
           <Row style={{'padding':'0px', }}>
-            <Col xs={6} md={4} style={{'padding':'5px',}}><Button className={'prop-btns'}>Save Property</Button></Col>
-            <Col xs={6} md={4} style={{'padding':'5px',}}><Button className={'prop-btns'}>Send to Friend</Button></Col>
+            <Col xs={6} md={4} style={{'padding':'5px',}}><Button className={'prop-btns'}>Save</Button></Col>
+            <Col xs={6} md={4} style={{'padding':'5px',}}><Button className={'prop-btns'}>Share</Button></Col>
             <Col xs={6} md={4} style={{'padding':'5px',}}><Button className={'prop-btns'}>Add Notes</Button></Col>
           </Row>
         </Col>
-        <Col md={7} style={{'margin-left':'20px', }}>
+        <Col xs={12} md={8}>
           <Row>
             <h1 style={{'margin-top':'0px', }}><strong>{this.props.data.title}</strong></h1>
             <p style={{'color':'#888888', }}>{this.props.data.location}</p>
@@ -74,10 +74,14 @@ export default class PropertyDetails extends React.Component {
                 <h3>Property Details</h3>
                 <p style={{'color':'#888888', }}>information last updated on: {this.props.data.lastupdt}</p>
                 <Row style={{'margin-top':'10px', 'color':'#666666', }}>
-                  <Col xs={6} md={4}>{this.props.data.f1} ft&#178; Area</Col><Col xs={6} md={4}>{this.props.data.f2}</Col><Col xs={6} md={4}>{this.props.data.f3}</Col>
+                  <Col xs={6} md={4}>{this.props.data.f1} ft&#178; Area</Col>
+                  <Col xs={6} md={4}>{this.props.data.f2}</Col>
+                  <Col xs={6} md={4}>{this.props.data.f3}</Col>
                 </Row>
                 <Row style={{'margin-top':'10px', 'color':'#666666', }}>
-                  <Col xs={6} md={4}>{this.props.data.f4}</Col><Col xs={6} md={4}>{this.props.data.f5}</Col><Col xs={6} md={4}>{this.props.data.f6}</Col>
+                  <Col xs={6} md={4}>{this.props.data.f4}</Col>
+                  <Col xs={6} md={4}>{this.props.data.f5}</Col>
+                  <Col xs={6} md={4}>{this.props.data.f6}</Col>
                 </Row>
                 <Row style={{'margin-top':'10px', 'margin-bottom':'20px', 'color':'#666666', }}>
                   <Col xs={6} md={4}>{this.props.data.f7}</Col><Col xs={6} md={4}>{this.props.data.f8}</Col><Col xs={6} md={4}>{this.props.data.f9}</Col>
@@ -100,7 +104,7 @@ export default class PropertyDetails extends React.Component {
             })}
           </Row>
           <Row>
-            <iframe width={665} height={450} frameborder={0} style={{"border":"0", 'margin-top':'30px', }} src={"https://www.google.com/maps/embed/v1/place?key=AIzaSyCcHOD6AxKpd0gHp6ivvBuKL1y_0v41qWg&q=Space+Needle,Seattle+WA"} allowfullscreen></iframe>
+            <iframe height={450} frameborder={0} style={{"border":"0", 'width':'100%', 'margin-top':'30px', }} src={"https://www.google.com/maps/embed/v1/place?key=AIzaSyCcHOD6AxKpd0gHp6ivvBuKL1y_0v41qWg&q=Space+Needle,Seattle+WA"} allowfullscreen></iframe>
           </Row>
         </Col>
       </Grid>

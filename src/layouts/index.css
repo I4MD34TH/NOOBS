@@ -661,7 +661,7 @@ input, .input-submit {
 .details::before {
     position: absolute;
     right: 0;
-    top: 90px;
+    top: 70px;
     border-top: 1px solid #dfdfdf;
     width: 100vw;
 }

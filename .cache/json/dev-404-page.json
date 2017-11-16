@@ -10,11 +10,6 @@
                 },
                 {
                     "node": {
-                        "path": "/page-2/"
-                    }
-                },
-                {
-                    "node": {
                         "path": "/PropertyListings/"
                     }
                 },
@@ -26,6 +21,11 @@
                 {
                     "node": {
                         "path": "/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/page-2/"
                     }
                 },
                 {
