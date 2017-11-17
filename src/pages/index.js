@@ -26,6 +26,9 @@ export default class IndexPage extends React.Component {
   navigatedetails = ()=> {
     window.location='../PropertyPage'
   }
+  navigateAddProp = ()=> {
+    window.location='../AddProperty'
+  }
   getInitialState = ()=> {
     return { show: false };
   }
@@ -92,6 +95,7 @@ export default class IndexPage extends React.Component {
                         <li><a onClick={this.navigateListings} style={{'color':'white',}}>PROPERTY LISTINGS</a></li>
                         <li><Scrollchor to={'#HowItWorks'} style={{'color':'white',}}>HOW IT WORKS</Scrollchor></li>
                         <li><a onClick={this.navigate} style={{'color':'white',}}>CONTACT</a></li>
+                        <li><a onClick={this.navigateAddProp} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'10px', }}>ADD PROPERTY</a></li>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

@@ -26,6 +26,9 @@ export default class PropertyPage extends React.Component {
   navigateListings = ()=> {
     window.location='../PropertyListings'
   }
+  navigateAddProp = ()=> {
+    window.location='../AddProperty'
+  }
   writeUserData(e) {
     console.log('submitted');
     e.preventDefault();
@@ -79,6 +82,7 @@ export default class PropertyPage extends React.Component {
                         <li><a onClick={this.navigateListings}>PROPERTY LISTINGS</a></li>
                         <li><a onClick={this.navigatehome}>HOW IT WORKS</a></li>
                         <li><a onClick={this.navigate}>CONTACT</a></li>
+                        <li><a onClick={this.navigateAddProp} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'10px', }}>ADD PROPERTY</a></li>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

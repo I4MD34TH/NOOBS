@@ -7,7 +7,7 @@
       "layout": "index",
       "jsonName": "dev-404-page.json",
       "internalComponentName": "ComponentDev404Page",
-      "updatedAt": 1510816767146,
+      "updatedAt": 1510900475476,
       "context": {},
       "pluginCreator___NODE": "Plugin dev-404-page",
       "pluginCreatorId": "Plugin dev-404-page",
@@ -17,7 +17,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "fad16d6e82437182f2f668a96bd54562",
+        "contentDigest": "96bee2c5eacbeace47f2168abb1490d8",
         "owner": "internal-data-bridge"
       }
     },
@@ -361,12 +361,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2017-11-16T07:18:57.671Z",
+      "buildTime": "2017-11-17T06:33:58.742Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "df08eb0fcb5486a41479348aa44e209d",
+        "contentDigest": "5bb3217e6c225acf43e1c063851ca68f",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -378,7 +378,7 @@
       "layout": "index",
       "jsonName": "404.json",
       "internalComponentName": "Component404",
-      "updatedAt": 1510816767163,
+      "updatedAt": 1510900475498,
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
@@ -388,7 +388,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "b4605bcd73620d72d8641d22a61f7173",
+        "contentDigest": "79d2573e71de19d97f4c32186aa9384f",
         "owner": "internal-data-bridge"
       }
     },
@@ -399,7 +399,7 @@
       "layout": "index",
       "jsonName": "property-listings.json",
       "internalComponentName": "ComponentPropertyListings",
-      "updatedAt": 1510816767165,
+      "updatedAt": 1510900475499,
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
@@ -409,7 +409,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "3d13461dfdbfffa52dc0ec8741982323",
+        "contentDigest": "ea38531fb5ef966dd6fcdeecc0d64417",
         "owner": "internal-data-bridge"
       }
     },
@@ -420,7 +420,7 @@
       "layout": "index",
       "jsonName": "property-page.json",
       "internalComponentName": "ComponentPropertyPage",
-      "updatedAt": 1510816767166,
+      "updatedAt": 1510900475505,
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
@@ -430,7 +430,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "a9f8798f146a1f0cdc479de9e2ecdca4",
+        "contentDigest": "f71453654b8fdaa18b4c57d7f580b39b",
         "owner": "internal-data-bridge"
       }
     },
@@ -441,7 +441,7 @@
       "layout": "index",
       "jsonName": "index.json",
       "internalComponentName": "ComponentIndex",
-      "updatedAt": 1510816767170,
+      "updatedAt": 1510900475506,
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
@@ -451,7 +451,28 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "54d5e998b1bd7f579ed8e13c9c555f0f",
+        "contentDigest": "b2a9b6fbdc5006cf2812c4b7695b0f6c",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /AddProperty/": {
+      "path": "/AddProperty/",
+      "component": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/AddProperty.js",
+      "componentChunkName": "component---src-pages-add-property-js",
+      "layout": "index",
+      "jsonName": "add-property.json",
+      "internalComponentName": "ComponentAddProperty",
+      "updatedAt": 1510900475509,
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/AddProperty.js",
+      "id": "SitePage /AddProperty/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "cd5569172e7988a937e3b6bd0bfb6278",
         "owner": "internal-data-bridge"
       }
     },
@@ -462,7 +483,7 @@
       "layout": "index",
       "jsonName": "page-2.json",
       "internalComponentName": "ComponentPage2",
-      "updatedAt": 1510816767174,
+      "updatedAt": 1510900475510,
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
@@ -472,7 +493,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f845f7be327dcc2d27c4fee5559852aa",
+        "contentDigest": "e9dfe217a410eff26d42494e0f48fbe5",
         "owner": "internal-data-bridge"
       }
     },
@@ -483,7 +504,7 @@
       "layout": "index",
       "jsonName": "404-html.json",
       "internalComponentName": "Component404Html",
-      "updatedAt": 1510816767181,
+      "updatedAt": 1510900475528,
       "context": {},
       "pluginCreator___NODE": "Plugin prod-404",
       "pluginCreatorId": "Plugin prod-404",
@@ -493,7 +514,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "36f5527aa4f5d28d88bb490b60f14283",
+        "contentDigest": "11fa5d5a1356c5e968bfe69edef9025c",
         "owner": "internal-data-bridge"
       }
     }

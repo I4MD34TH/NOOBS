@@ -26,6 +26,9 @@ export default class PropertyListings extends React.Component {
   navigatedetails = ()=> {
     window.location='../PropertyPage'
   }
+  navigateAddProp = ()=> {
+    window.location='../AddProperty'
+  }
   writeUserData(e) {
     console.log('submitted');
     e.preventDefault();
@@ -89,6 +92,7 @@ export default class PropertyListings extends React.Component {
                         <li><Scrollchor to={'#property'}>PROPERTY LISTINGS</Scrollchor></li>
                         <li><a onClick={this.navigatehome}>HOW IT WORKS</a></li>
                         <li><a onClick={this.navigate}>CONTACT</a></li>
+                        <li><a onClick={this.navigateAddProp} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'10px', }}>ADD PROPERTY</a></li>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

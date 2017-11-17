@@ -7,6 +7,7 @@ exports.components = {
   "component---src-pages-property-listings-js": require("gatsby-module-loader?name=component---src-pages-property-listings-js!/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyListings.js"),
   "component---src-pages-property-page-js": require("gatsby-module-loader?name=component---src-pages-property-page-js!/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyPage.js"),
   "component---src-pages-index-js": require("gatsby-module-loader?name=component---src-pages-index-js!/home/i4md34th/Desktop/projects/NOOBS/src/pages/index.js"),
+  "component---src-pages-add-property-js": require("gatsby-module-loader?name=component---src-pages-add-property-js!/home/i4md34th/Desktop/projects/NOOBS/src/pages/AddProperty.js"),
   "component---src-pages-page-2-js": require("gatsby-module-loader?name=component---src-pages-page-2-js!/home/i4md34th/Desktop/projects/NOOBS/src/pages/page-2.js")
 }
 
@@ -21,6 +22,8 @@ exports.json = {
   "property-page.json": require("gatsby-module-loader?name=path---property-page!/home/i4md34th/Desktop/projects/NOOBS/.cache/json/property-page.json"),
   "layout-index.json": require("gatsby-module-loader?name=path---!/home/i4md34th/Desktop/projects/NOOBS/.cache/json/layout-index.json"),
   "index.json": require("gatsby-module-loader?name=path---index!/home/i4md34th/Desktop/projects/NOOBS/.cache/json/index.json"),
+  "layout-index.json": require("gatsby-module-loader?name=path---!/home/i4md34th/Desktop/projects/NOOBS/.cache/json/layout-index.json"),
+  "add-property.json": require("gatsby-module-loader?name=path---add-property!/home/i4md34th/Desktop/projects/NOOBS/.cache/json/add-property.json"),
   "layout-index.json": require("gatsby-module-loader?name=path---!/home/i4md34th/Desktop/projects/NOOBS/.cache/json/layout-index.json"),
   "page-2.json": require("gatsby-module-loader?name=path---page-2!/home/i4md34th/Desktop/projects/NOOBS/.cache/json/page-2.json"),
   "layout-index.json": require("gatsby-module-loader?name=path---!/home/i4md34th/Desktop/projects/NOOBS/.cache/json/layout-index.json"),

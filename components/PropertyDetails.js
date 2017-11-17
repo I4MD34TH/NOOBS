@@ -18,6 +18,11 @@ export default class PropertyDetails extends React.Component {
         title: '12 Marla House for sale',
         location: 'Dha 2',
         imgUrl: 'https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/'
+      },
+      {
+        title: '12 Marla House for sale',
+        location: 'Dha 2',
+        imgUrl: 'https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/'
       }
     ]
     this.setState({
@@ -45,7 +50,7 @@ export default class PropertyDetails extends React.Component {
             <Col xs={6} md={4} style={{'padding':'5px',}}><Button className={'prop-btns'}>Add Notes</Button></Col>
           </Row>
         </Col>
-        <Col xs={12} md={8}>
+        <Col xs={12} md={7} className={'marginprob'}>
           <Row>
             <h1 style={{'margin-top':'0px', }}><strong>{this.props.data.title}</strong></h1>
             <p style={{'color':'#888888', }}>{this.props.data.location}</p>
@@ -104,6 +109,7 @@ export default class PropertyDetails extends React.Component {
             })}
           </Row>
           <Row>
+            <h3>Map Location</h3>
             <iframe height={450} frameborder={0} style={{"border":"0", 'width':'100%', 'margin-top':'30px', }} src={"https://www.google.com/maps/embed/v1/place?key=AIzaSyCcHOD6AxKpd0gHp6ivvBuKL1y_0v41qWg&q=Space+Needle,Seattle+WA"} allowfullscreen></iframe>
           </Row>
         </Col>

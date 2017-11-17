@@ -1,7 +1,7 @@
 {
     "data": {
         "allSitePage": {
-            "totalCount": 6,
+            "totalCount": 7,
             "edges": [
                 {
                     "node": {
@@ -21,6 +21,11 @@
                 {
                     "node": {
                         "path": "/"
+                    }
+                },
+                {
+                    "node": {
+                        "path": "/AddProperty/"
                     }
                 },
                 {
