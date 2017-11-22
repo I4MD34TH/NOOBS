@@ -8,6 +8,7 @@ export default class AdditionalDetails_plot extends React.Component {
       <div style={{'margin-top':'20px', }}>
         <Col md={6} xs={12}>
           <h4 style={{"color":"#666666", }}>Additional Features</h4>
+          <hr />
           <Col md={12} xs={12} style={{'padding':'0',}}>
             <Col xs={12} md={12} style={{'padding':'0',}}>
               <input type={"checkbox"} id={"mft-1"} name={"main_features"} value={"possesion"} />
@@ -33,6 +34,7 @@ export default class AdditionalDetails_plot extends React.Component {
         </Col>
         <Col md={6} xs={12}>
           <h4 style={{"color":"#666666", }}>Utilities</h4>
+          <hr />
           <Col md={12} xs={12} style={{'padding':'0',}}>
             <Col xs={12} md={12} style={{'padding':'0',}}>
               <input type={"checkbox"} id={"ut-1"} name={"utilities"} value={"electricity"} />

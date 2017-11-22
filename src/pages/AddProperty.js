@@ -220,6 +220,9 @@ export default class PropertyPage extends React.Component {
                     <Col md={4} xs={12} style={{'padding':'0px',}}>
                       <input type={'number'} min={0} style={{'padding':'10px 15px', 'border':'1px solid #cecece', 'border-radius':'0px', 'margin-top':'20px', 'width':'100%', 'height':'auto', 'appearance':'textfield', '-webkit-appearance': 'none', '-moz-appearance': 'textfield', }} placeholder={'Phone'} />
                     </Col>
+                    <Col md={8} xs={12} className={'text-center'} style={{'padding':'0px',}}>
+                      <h6 style={{'padding':'8.15px 15px', 'margin-top':'20px', 'background-color':'#efefef', }}>Please add your Phone Nnumber in the following format: <br />[ 03XX-XXXXXXX ]</h6>
+                    </Col>
                   </Col>
                 </Row>
                 <div style={{'border-left':'5px solid #75ce69', 'padding':'10px 15px', 'margin-top':'20px', 'background-color':'#efefef', }}>

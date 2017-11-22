@@ -40,6 +40,7 @@ export default class AdditionalDetails_commercial extends React.Component {
         <hr />
         <Col md={6} xs={12}>
           <h4 style={{"color":"#666666", }}>Additional Features</h4>
+          <hr />
           <Col md={6} xs={12} style={{'padding':'0',}}>
             <Col xs={12} md={12} style={{'padding':'0',}}>
               <input type={"checkbox"} id={"ft-1"} name={"additional_features"} value={"central heating"} />
@@ -79,6 +80,7 @@ export default class AdditionalDetails_commercial extends React.Component {
         </Col>
         <Col md={6} xs={12}>
           <h4 style={{"color":"#666666", }}>Utilities</h4>
+          <hr />
           <Col md={12} xs={12} style={{'padding':'0',}}>
             <Col xs={12} md={12} style={{'padding':'0',}}>
               <input type={"checkbox"} id={"ut-1"} name={"utilities"} value={"electricity"} />
