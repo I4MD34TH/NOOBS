@@ -78,11 +78,11 @@ export default class PropertyPage extends React.Component {
               </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav pullRight className={'main-nav'} pullRight style={{'margin-top':'15px', }}>
-                        <li><a onClick={this.navigatehome}>ABOUT</a></li>
-                        <li><a onClick={this.navigateListings}>PROPERTY LISTINGS</a></li>
-                        <li><a onClick={this.navigatehome}>HOW IT WORKS</a></li>
-                        <li><a onClick={this.navigate}>CONTACT</a></li>
-                        <li><a onClick={this.navigateAddProp} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'10px', }}>ADD PROPERTY</a></li>
+                        <li><a onClick={this.navigatehome} style={{'margin-left':'5px', 'margin-right':'5px', }}>ABOUT</a></li>
+                        <li><a onClick={this.navigateListings} style={{'margin-left':'5px', 'margin-right':'5px', }}>PROPERTY LISTINGS</a></li>
+                        <li><a onClick={this.navigatehome} style={{'margin-left':'5px', 'margin-right':'5px', }}>HOW IT WORKS</a></li>
+                        <li><a onClick={this.navigate} style={{'margin-left':'5px', 'margin-right':'5px', }}>CONTACT</a></li>
+                        <li><a onClick={this.navigateAddProp} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>ADD PROPERTY</a></li>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

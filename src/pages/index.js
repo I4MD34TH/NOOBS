@@ -90,12 +90,12 @@ export default class IndexPage extends React.Component {
                 <Navbar.Toggle />
               </Navbar.Header>
                 <Navbar.Collapse>
-                    <Nav pullRight className={'main-nav'} pullRight style={{'margin-top':'5px',}}>
-                        <li><Scrollchor to={'#AboutUs'} style={{'color':'white',}}>ABOUT</Scrollchor></li>
-                        <li><a onClick={this.navigateListings} style={{'color':'white',}}>PROPERTY LISTINGS</a></li>
-                        <li><Scrollchor to={'#HowItWorks'} style={{'color':'white',}}>HOW IT WORKS</Scrollchor></li>
-                        <li><a onClick={this.navigate} style={{'color':'white',}}>CONTACT</a></li>
-                        <li><a onClick={this.navigateAddProp} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'10px', }}>ADD PROPERTY</a></li>
+                    <Nav pullRight className={'main-nav'} pullRight style={{'margin-top':'5px', 'margin-left':'5px', 'margin-right':'5px', }}>
+                        <li><Scrollchor to={'#AboutUs'} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>ABOUT</Scrollchor></li>
+                        <li><a onClick={this.navigateListings} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>PROPERTY LISTINGS</a></li>
+                        <li><Scrollchor to={'#HowItWorks'} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>HOW IT WORKS</Scrollchor></li>
+                        <li><a onClick={this.navigate} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>CONTACT</a></li>
+                        <li><a onClick={this.navigateAddProp} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>ADD PROPERTY</a></li>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

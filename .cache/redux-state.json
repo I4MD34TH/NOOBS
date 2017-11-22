@@ -7,7 +7,7 @@
       "layout": "index",
       "jsonName": "dev-404-page.json",
       "internalComponentName": "ComponentDev404Page",
-      "updatedAt": 1510900475476,
+      "updatedAt": 1511336298650,
       "context": {},
       "pluginCreator___NODE": "Plugin dev-404-page",
       "pluginCreatorId": "Plugin dev-404-page",
@@ -17,7 +17,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "96bee2c5eacbeace47f2168abb1490d8",
+        "contentDigest": "39c38c684b5a9499c632b0f75028cfca",
         "owner": "internal-data-bridge"
       }
     },
@@ -307,6 +307,10 @@
             "version": "^3.2.1"
           },
           {
+            "name": "material-ui",
+            "version": "^0.19.4"
+          },
+          {
             "name": "owl.carousel",
             "version": "^2.2.0"
           },
@@ -323,12 +327,20 @@
             "version": "^16.0.0"
           },
           {
+            "name": "react-dropzone",
+            "version": "^4.2.3"
+          },
+          {
             "name": "react-router-bootstrap",
             "version": "^0.24.4"
           },
           {
             "name": "react-scrollchor",
             "version": "^4.0.0"
+          },
+          {
+            "name": "react-select",
+            "version": "^1.0.0-rc.10"
           },
           {
             "name": "react-slick",
@@ -361,97 +373,13 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2017-11-17T06:33:58.742Z",
+      "buildTime": "2017-11-22T07:37:02.173Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "5bb3217e6c225acf43e1c063851ca68f",
+        "contentDigest": "5a245cb1940e384739c2ed6675355082",
         "type": "Site",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /404/": {
-      "path": "/404/",
-      "component": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/404.js",
-      "componentChunkName": "component---src-pages-404-js",
-      "layout": "index",
-      "jsonName": "404.json",
-      "internalComponentName": "Component404",
-      "updatedAt": 1510900475498,
-      "context": {},
-      "pluginCreator___NODE": "Plugin component-page-creator",
-      "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/404.js",
-      "id": "SitePage /404/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "79d2573e71de19d97f4c32186aa9384f",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /PropertyListings/": {
-      "path": "/PropertyListings/",
-      "component": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyListings.js",
-      "componentChunkName": "component---src-pages-property-listings-js",
-      "layout": "index",
-      "jsonName": "property-listings.json",
-      "internalComponentName": "ComponentPropertyListings",
-      "updatedAt": 1510900475499,
-      "context": {},
-      "pluginCreator___NODE": "Plugin component-page-creator",
-      "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyListings.js",
-      "id": "SitePage /PropertyListings/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "ea38531fb5ef966dd6fcdeecc0d64417",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /PropertyPage/": {
-      "path": "/PropertyPage/",
-      "component": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyPage.js",
-      "componentChunkName": "component---src-pages-property-page-js",
-      "layout": "index",
-      "jsonName": "property-page.json",
-      "internalComponentName": "ComponentPropertyPage",
-      "updatedAt": 1510900475505,
-      "context": {},
-      "pluginCreator___NODE": "Plugin component-page-creator",
-      "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyPage.js",
-      "id": "SitePage /PropertyPage/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "f71453654b8fdaa18b4c57d7f580b39b",
-        "owner": "internal-data-bridge"
-      }
-    },
-    "SitePage /": {
-      "path": "/",
-      "component": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/index.js",
-      "componentChunkName": "component---src-pages-index-js",
-      "layout": "index",
-      "jsonName": "index.json",
-      "internalComponentName": "ComponentIndex",
-      "updatedAt": 1510900475506,
-      "context": {},
-      "pluginCreator___NODE": "Plugin component-page-creator",
-      "pluginCreatorId": "Plugin component-page-creator",
-      "componentPath": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/index.js",
-      "id": "SitePage /",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "b2a9b6fbdc5006cf2812c4b7695b0f6c",
         "owner": "internal-data-bridge"
       }
     },
@@ -462,7 +390,7 @@
       "layout": "index",
       "jsonName": "add-property.json",
       "internalComponentName": "ComponentAddProperty",
-      "updatedAt": 1510900475509,
+      "updatedAt": 1511336298671,
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
@@ -472,7 +400,91 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "cd5569172e7988a937e3b6bd0bfb6278",
+        "contentDigest": "abd74b5a662c2f1493369b24783aabe3",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /404/": {
+      "path": "/404/",
+      "component": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/404.js",
+      "componentChunkName": "component---src-pages-404-js",
+      "layout": "index",
+      "jsonName": "404.json",
+      "internalComponentName": "Component404",
+      "updatedAt": 1511336298674,
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/404.js",
+      "id": "SitePage /404/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "aff23255b0a1884daf772270f19e7d60",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /PropertyListings/": {
+      "path": "/PropertyListings/",
+      "component": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyListings.js",
+      "componentChunkName": "component---src-pages-property-listings-js",
+      "layout": "index",
+      "jsonName": "property-listings.json",
+      "internalComponentName": "ComponentPropertyListings",
+      "updatedAt": 1511336298676,
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyListings.js",
+      "id": "SitePage /PropertyListings/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "587d3d9a8bd8761def1018ffe9663c56",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /PropertyPage/": {
+      "path": "/PropertyPage/",
+      "component": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyPage.js",
+      "componentChunkName": "component---src-pages-property-page-js",
+      "layout": "index",
+      "jsonName": "property-page.json",
+      "internalComponentName": "ComponentPropertyPage",
+      "updatedAt": 1511336298683,
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/PropertyPage.js",
+      "id": "SitePage /PropertyPage/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "f70c03bd8a78c7ef287480589139ed16",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /": {
+      "path": "/",
+      "component": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/index.js",
+      "componentChunkName": "component---src-pages-index-js",
+      "layout": "index",
+      "jsonName": "index.json",
+      "internalComponentName": "ComponentIndex",
+      "updatedAt": 1511336298687,
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/home/i4md34th/Desktop/projects/NOOBS/src/pages/index.js",
+      "id": "SitePage /",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "7eefbcebf8821c13fe344292ecb527cc",
         "owner": "internal-data-bridge"
       }
     },
@@ -483,7 +495,7 @@
       "layout": "index",
       "jsonName": "page-2.json",
       "internalComponentName": "ComponentPage2",
-      "updatedAt": 1510900475510,
+      "updatedAt": 1511336298689,
       "context": {},
       "pluginCreator___NODE": "Plugin component-page-creator",
       "pluginCreatorId": "Plugin component-page-creator",
@@ -493,7 +505,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "e9dfe217a410eff26d42494e0f48fbe5",
+        "contentDigest": "61a8a98acae40941cffae6aa92a7ecb8",
         "owner": "internal-data-bridge"
       }
     },
@@ -504,7 +516,7 @@
       "layout": "index",
       "jsonName": "404-html.json",
       "internalComponentName": "Component404Html",
-      "updatedAt": 1510900475528,
+      "updatedAt": 1511336298710,
       "context": {},
       "pluginCreator___NODE": "Plugin prod-404",
       "pluginCreatorId": "Plugin prod-404",
@@ -514,14 +526,14 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "11fa5d5a1356c5e968bfe69edef9025c",
+        "contentDigest": "1f8e62ab92554078a20672edca6b0c5f",
         "owner": "internal-data-bridge"
       }
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "8be4dcdd59938c5aec0bb4f0ca76abea"
+    "PLUGINS_HASH": "1383edc7de6e49476ec99ef9af6f81f6"
   },
   "componentDataDependencies": {
     "nodes": {},

@@ -5,6 +5,11 @@
             "edges": [
                 {
                     "node": {
+                        "path": "/AddProperty/"
+                    }
+                },
+                {
+                    "node": {
                         "path": "/404/"
                     }
                 },
@@ -21,11 +26,6 @@
                 {
                     "node": {
                         "path": "/"
-                    }
-                },
-                {
-                    "node": {
-                        "path": "/AddProperty/"
                     }
                 },
                 {
