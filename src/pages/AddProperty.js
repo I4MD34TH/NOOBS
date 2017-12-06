@@ -215,36 +215,38 @@ export default class PropertyPage extends React.Component {
     return(
       <div className={'AddProperty'}>
         <section className={'header'} style={{'width':'100%',}}>
-            <Navbar className={'navbar'} style={{'background-color':'transparent', 'border':'none',}}>
+          <Navbar className={'navbar'} style={{'background-color':'transparent', 'border':'none',}}>
             <Navbar.Header>
               <Navbar.Brand>
-                  <img onClick={this.navigatehome} src={'../images/footer-logo.png'} style={{'height':'70px', 'cursor':'pointer',}} />
+                  <img onClick={this.navigatehome} src={'../images/footer-logo.png'} style={{'cursor':'pointer',}} />
               </Navbar.Brand>
               <Navbar.Toggle style={{'margin-top':'15px', 'filter': 'brightness(1) invert(0)', '-webkit-filter': 'brightness(1) invert(0)',}} />
             </Navbar.Header>
-                <Navbar.Collapse>
-                    <Nav pullRight className={'main-nav'} pullRight style={{'margin-top':'15px', }}>
-                        <li><a onClick={this.navigatehome}>ABOUT</a></li>
-                        <li><a onClick={this.navigateListings}>PROPERTY LISTINGS</a></li>
-                        <li><a onClick={this.navigatehome}>HOW IT WORKS</a></li>
-                        <li><a onClick={this.navigate}>CONTACT</a></li>
-                        <li id={'signinbtn'}><a onClick={()=>{this.signin()}} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN IN</a></li>
-                        <li id={'signoutbtn'}><a onClick={()=>{this.signout()}} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN OUT</a></li>
-                        <li>
-                          <div id={'usrimg'} href={'#'} style={{'padding':'0px', 'margin':'0px 5px', }}>
-                            <img height={'50px'} src={this.state.profilepic} />
-                            <div className="usrimg-content">
-                              <ol>
-                                <li><a>page-1</a></li>
-                                <li><a>page-2</a></li>
-                                <li><a>page-3</a></li>
-                              </ol>
-                            </div>
-                          </div>
-                        </li>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+              <Navbar.Collapse>
+              <Nav pullRight style={{'margin-top':'15px', }}>
+                <li id={'signinbtn'}><a onClick={()=>{this.signin()}} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN IN</a></li>
+                <li id={'signoutbtn'}><a onClick={()=>{this.signout()}} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN OUT</a></li>
+                <li>
+                  <div id={'usrimg'} href={'#'} style={{'padding':'0px', 'margin':'0px 5px', }}>
+                    <img height={'50px'} src={this.state.profilepic} />
+                    <div className="usrimg-content">
+                      <ol>
+                        <li><a>page-1</a></li>
+                        <li><a>page-2</a></li>
+                        <li><a>page-3</a></li>
+                      </ol>
+                    </div>
+                  </div>
+                </li>
+              </Nav>
+              <Nav className={'main-nav'} pullRight style={{'margin-top':'15px', }}>
+                  <li><a onClick={this.navigatehome} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>ABOUT</a></li>
+                  <li><a onClick={this.navigateListings} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>PROPERTY LISTINGS</a></li>
+                  <li><a onClick={this.navigatehome} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>HOW IT WORKS</a></li>
+                  <li><a onClick={this.navigate} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>CONTACT</a></li>
+              </Nav>
+              </Navbar.Collapse>
+          </Navbar>
         </section>
         <Grid className={'add-details'}>
           <Row style={{'margin':'0px 10px', 'padding-left':'20px', 'padding-right':'20px', 'padding-bottom':'10px', 'background-color':'#efefef', 'border':'1px solid #cecece', }}>
@@ -337,10 +339,10 @@ export default class PropertyPage extends React.Component {
                       <h4>Contact Information</h4>
                     </div>
                     <Col md={4} xs={12} style={{'padding':'0px',}}>
-                      <input type={'number'} min={0} style={{'padding':'10px 15px', 'border':'1px solid #cecece', 'border-radius':'0px', 'margin-top':'20px', 'width':'100%', 'height':'auto', 'appearance':'textfield', '-webkit-appearance': 'none', '-moz-appearance': 'textfield', }} placeholder={'Phone'} />
+                      <input type={'number'} min={0} style={{'padding':'10px 15px', 'border':'1px solid #eaeaea', 'border-radius':'0px', 'margin-top':'20px', 'width':'100%', 'height':'auto', 'appearance':'textfield', '-webkit-appearance': 'none', '-moz-appearance': 'textfield', }} placeholder={'Phone'} />
                     </Col>
                     <Col md={8} xs={12} className={'text-center'} style={{'padding':'0px',}}>
-                      <h6 style={{'padding':'8.15px 15px', 'margin-top':'20px', 'background-color':'#efefef', }}>Please add your Phone Nnumber in the following format: <br />[ 03XX-XXXXXXX ]</h6>
+                      <h6 style={{'padding':'8.15px 15px', 'margin-top':'20px', 'background-color':'#eaeaea', }}>Please add your Phone Nnumber in the following format: <br />[ 03XX-XXXXXXX ]</h6>
                     </Col>
                   </Col>
                 </Row>

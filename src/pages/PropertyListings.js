@@ -183,37 +183,39 @@ export default class PropertyListings extends React.Component {
     return (
       <div className={'listingPage'}>
         <section className={'header'} style={{'width':'100%',}}>
-            <Navbar className={'navbar'} style={{'background-color':'transparent', 'border':'none',}}>
-              <Navbar.Header>
-                <Navbar.Brand>
-                    <img onClick={this.navigatehome} src={'../images/footer-logo.png'} style={{'height':'70px', 'cursor':'pointer',}} />
-                </Navbar.Brand>
-                <Navbar.Toggle style={{'margin-top':'15px', 'filter': 'brightness(1) invert(0)', '-webkit-filter': 'brightness(1) invert(0)',}} />
-              </Navbar.Header>
-                <Navbar.Collapse>
-                    <Nav pullRight className={'main-nav'} pullRight style={{'margin-top':'15px', }}>
-                        <li><a onClick={this.navigatehome} style={{'margin-left':'5px', 'margin-right':'5px', }}>ABOUT</a></li>
-                        <li><Scrollchor to={'#property'} style={{'margin-left':'5px', 'margin-right':'5px', }}>PROPERTY LISTINGS</Scrollchor></li>
-                        <li><a onClick={this.navigatehome} style={{'margin-left':'5px', 'margin-right':'5px', }}>HOW IT WORKS</a></li>
-                        <li><a onClick={this.navigate} style={{'margin-left':'5px', 'margin-right':'5px', }}>CONTACT</a></li>
-                        <li><a onClick={this.navigateAddProp} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>ADD PROPERTY</a></li>
-                        <li id={'signinbtn'}><a onClick={()=>{this.signin()}} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN IN</a></li>
-                        <li id={'signoutbtn'}><a onClick={()=>{this.signout()}} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN OUT</a></li>
-                        <li>
-                          <div id={'usrimg'} href={'#'} style={{'padding':'0px', 'margin':'0px 5px', }}>
-                            <img height={'50px'} src={this.state.profilepic} />
-                            <div className="usrimg-content">
-                              <ol>
-                                <li><a>page-1</a></li>
-                                <li><a>page-2</a></li>
-                                <li><a>page-3</a></li>
-                              </ol>
-                            </div>
-                          </div>
-                        </li>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+          <Navbar className={'navbar'} style={{'background-color':'transparent', 'border':'none',}}>
+            <Navbar.Header>
+              <Navbar.Brand>
+                  <img onClick={this.navigatehome} src={'../images/footer-logo.png'} style={{'cursor':'pointer',}} />
+              </Navbar.Brand>
+              <Navbar.Toggle style={{'margin-top':'15px', 'filter': 'brightness(1) invert(0)', '-webkit-filter': 'brightness(1) invert(0)',}} />
+            </Navbar.Header>
+              <Navbar.Collapse>
+              <Nav pullRight style={{'margin-top':'15px', }}>
+                <li><a onClick={this.navigateAddProp} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>ADD PROPERTY</a></li>
+                <li id={'signinbtn'}><a onClick={()=>{this.signin()}} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN IN</a></li>
+                <li id={'signoutbtn'}><a onClick={()=>{this.signout()}} style={{'color':'#fff', 'background-color': '#75ce69', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN OUT</a></li>
+                <li>
+                  <div id={'usrimg'} href={'#'} style={{'padding':'0px', 'margin':'0px 5px', }}>
+                    <img height={'50px'} src={this.state.profilepic} />
+                    <div className="usrimg-content">
+                      <ol>
+                        <li><a>page-1</a></li>
+                        <li><a>page-2</a></li>
+                        <li><a>page-3</a></li>
+                      </ol>
+                    </div>
+                  </div>
+                </li>
+              </Nav>
+              <Nav className={'main-nav'} pullRight style={{'margin-top':'15px', }}>
+                  <li><a onClick={this.navigatehome} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>ABOUT</a></li>
+                  <li><Scrollchor to={'#property'} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>PROPERTY LISTINGS</Scrollchor></li>
+                  <li><a onClick={this.navigatehome} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>HOW IT WORKS</a></li>
+                  <li><a onClick={this.navigate} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>CONTACT</a></li>
+              </Nav>
+              </Navbar.Collapse>
+          </Navbar>
         </section>
         <section id={'property'} className={'search-section listing-search'} style={{'background-color': '#75ce69', 'z-index':'2',}}>
             <div className={'text-center'}>

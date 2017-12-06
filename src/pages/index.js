@@ -184,37 +184,39 @@ export default class IndexPage extends React.Component {
     let closeAnonymous = () => this.setState({ showAnonymous: false, });
     let closeUsr = () => this.setState({ showUsr: false, });
     return (
-      <div>
+      <div className={'HomePage'}>
           <section className={'header'} style={{'position':'absolute', 'z-index':'3', 'width':'100%',}}>
             <Navbar className={'navbar'} style={{'background-color':'transparent', 'border':'none',}}>
               <Navbar.Header>
                 <Navbar.Brand>
-                    <img onClick={this.navigatehome} src={'../images/logo-header.png'} style={{'height':'70px', 'cursor':'pointer',}} />
+                    <img onClick={this.navigatehome} src={'../images/logo-header.png'} style={{'cursor':'pointer',}} />
                 </Navbar.Brand>
-                <Navbar.Toggle />
+                <Navbar.Toggle style={{'margin-top':'15px', 'filter': 'brightness(1) invert(0)', '-webkit-filter': 'brightness(1) invert(0)',}} />
               </Navbar.Header>
                 <Navbar.Collapse>
-                    <Nav pullRight className={'main-nav'} pullRight style={{'margin-top':'5px', 'margin-left':'5px', 'margin-right':'5px', }}>
-                        <li><Scrollchor to={'#AboutUs'} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>ABOUT</Scrollchor></li>
-                        <li><a onClick={this.navigateListings} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>PROPERTY LISTINGS</a></li>
-                        <li><Scrollchor to={'#HowItWorks'} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>HOW IT WORKS</Scrollchor></li>
-                        <li><a onClick={this.navigate} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>CONTACT</a></li>
-                        <li><a onClick={this.navigateAddProp} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>ADD PROPERTY</a></li>
-                        <li id={'signinbtn'}><a onClick={()=>{this.signin()}} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN IN</a></li>
-                        <li id={'signoutbtn'}><a onClick={()=>{this.signout()}} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN OUT</a></li>
-                        <li>
-                          <div id={'usrimg'} href={'#'} style={{'padding':'0px', 'margin':'0px 5px', }}>
-                            <img height={'50px'} src={this.state.profilepic} />
-                            <div className="usrimg-content">
-                              <ol>
-                                <li><a>page-1</a></li>
-                                <li><a>page-2</a></li>
-                                <li><a>page-3</a></li>
-                              </ol>
-                            </div>
-                          </div>
-                        </li>
-                    </Nav>
+                <Nav pullRight style={{'margin-top':'15px', }}>
+                  <li><a onClick={this.navigateAddProp} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>ADD PROPERTY</a></li>
+                  <li id={'signinbtn'}><a onClick={()=>{this.signin()}} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN IN</a></li>
+                  <li id={'signoutbtn'}><a onClick={()=>{this.signout()}} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN OUT</a></li>
+                  <li>
+                    <div id={'usrimg'} href={'#'} style={{'padding':'0px', 'margin':'0px 5px', }}>
+                      <img height={'50px'} src={this.state.profilepic} />
+                      <div className="usrimg-content">
+                        <ol>
+                          <li><a>page-1</a></li>
+                          <li><a>page-2</a></li>
+                          <li><a>page-3</a></li>
+                        </ol>
+                      </div>
+                    </div>
+                  </li>
+                </Nav>
+                <Nav className={'main-nav'} pullRight style={{'margin-top':'15px', }}>
+                    <li><Scrollchor to={'#AboutUs'} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>ABOUT</Scrollchor></li>
+                    <li><a onClick={this.navigateListings} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>PROPERTY LISTINGS</a></li>
+                    <li><Scrollchor to={'#HowItWorks'} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>HOW IT WORKS</Scrollchor></li>
+                    <li><a onClick={this.navigate} style={{'margin-left':'5px', 'margin-right':'5px', 'background-color':'#eee', }}>CONTACT</a></li>
+                </Nav>
                 </Navbar.Collapse>
             </Navbar>
           </section>
