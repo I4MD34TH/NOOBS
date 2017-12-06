@@ -3,14 +3,15 @@ import PropertyTile from '../../components/AgencyTile'
 import { Grid, Col, Button, Modal } from 'react-bootstrap'
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem, Row } from 'react-bootstrap'
 import Scrollchor from 'react-scrollchor';
-import firebase from '../../firebase'
+import * as firebase from "firebase";
 
 export default class IndexPage extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
       listingsData: [],
-      email: ''
+      email: '',
+      profilepic: '',
     }
     console.log(firebase);
   }
@@ -30,17 +31,119 @@ export default class IndexPage extends React.Component {
     window.location='../AddProperty'
   }
   getInitialState = ()=> {
-    return { show: false };
+    return { showAnonymous: false, showUsr: false };
   }
   writeUserData(e) {
-    console.log('submitted');
-    e.preventDefault();
-    firebase.database().ref('users/').set({
-      email: this.state.email
+    const database = firebase.database();
+    database.ref('users/').push({
+      email: this.state.email,
+    });
+  }
+  chksignin () {
+    var usr = firebase.auth().currentUser;
+    var usremail = usr.email;
+    var db = firebase.database().ref('users/');
+    if (usr == null) {
+      this.setState({ showAnonymous: true, });
+    } else {
+      if (usr.isAnonymous) {
+        this.setState({ showAnonymous: true, });
+      } else {
+        this.setState({ showUsr: true, });
+        db.push({
+          email: usremail,
+        });
+      }
+    }
+  }
+  signin () {
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+    .then(function() {
+      //var provider = new firebase.auth.GoogleAuthProvider();
+      var provider = new firebase.auth.OAuthProvider('google.com');
+      //firebase.auth().signInWithPopup(provider)
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you the OAuth Access Token for that provider.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+      });
+      // In memory persistence will be applied to the signed in Google user
+      // even though the persistence was set to 'none' and a page redirect
+      // occurred.
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    });
+    // //var provider = new firebase.auth.GoogleAuthProvider();
+    // var usr = firebase.auth().currentUser;
+    // firebase.auth().signInWithPopup(provider).then(function(result) {
+    //   // This gives you a Google Access Token. You can use it to access the Google API.
+    //   var token = result.credential.accessToken;
+    //   // The signed-in user info.
+    //   var user = result.user;
+    //   // ...
+    // }).catch(function(error) {
+    //   // Handle Errors here.
+    //   var errorCode = error.code;
+    //   var errorMessage = error.message;
+    //   // The email of the user's account used.
+    //   var email = error.email;
+    //   // The firebase.auth.AuthCredential type that was used.
+    //   var credential = error.credential;
+    //   // ...
+    // })
+    firebase.auth().onAuthStateChanged(function(user) {
+      document.getElementById('signinbtn').style.display = 'none';
+      document.getElementById('usrimg').style.display = 'block';
+    });
+  }
+  signout () {
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+    }).catch(function(error) {
+      // An error happened.
     });
   }
   componentDidMount() {
     var database = firebase.database();
+    var provider = new firebase.auth.GoogleAuthProvider();
+
+    if (firebase.apps.length === 0) {
+      firebase.initializeApp({
+        apiKey: "AIzaSyC7TEjW_DaBTWIWxVsOZIXbPC0rBej-g9c",
+        authDomain: "starting-firebase-7cff0.firebaseapp.com",
+        databaseURL: "https://starting-firebase-7cff0.firebaseio.com",
+        projectId: "starting-firebase-7cff0",
+        storageBucket: "starting-firebase-7cff0.appspot.com",
+        messagingSenderId: "317371861792"
+      });
+    };
+
+    firebase.auth().onAuthStateChanged((user) => {
+      console.log(user);
+      if (user == null) {
+        document.getElementById('signinbtn').style.display = 'block';
+        document.getElementById('usrimg').style.display = 'none';
+        document.getElementById('signoutbtn').style.display = 'none';
+      } else {
+        if (user.isAnonymous) {
+          document.getElementById('signinbtn').style.display = 'block';
+          document.getElementById('usrimg').style.display = 'none';
+          document.getElementById('signoutbtn').style.display = 'none';
+        } else {
+          document.getElementById('signinbtn').style.display = 'none';
+          document.getElementById('usrimg').style.display = 'block';
+          document.getElementById('signoutbtn').style.display = 'block';
+        }
+      }
+      this.setState({
+        profilepic: user.photoURL,
+      })
+    });
+
     var listingsData = [
       {
         title: '12 Marla House for sale',
@@ -78,7 +181,8 @@ export default class IndexPage extends React.Component {
     })
   }
   render () {
-    let close = () => this.setState({ show: false });
+    let closeAnonymous = () => this.setState({ showAnonymous: false, });
+    let closeUsr = () => this.setState({ showUsr: false, });
     return (
       <div>
           <section className={'header'} style={{'position':'absolute', 'z-index':'3', 'width':'100%',}}>
@@ -96,6 +200,20 @@ export default class IndexPage extends React.Component {
                         <li><Scrollchor to={'#HowItWorks'} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>HOW IT WORKS</Scrollchor></li>
                         <li><a onClick={this.navigate} style={{'color':'white', 'margin-left':'5px', 'margin-right':'5px', }}>CONTACT</a></li>
                         <li><a onClick={this.navigateAddProp} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>ADD PROPERTY</a></li>
+                        <li id={'signinbtn'}><a onClick={()=>{this.signin()}} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN IN</a></li>
+                        <li id={'signoutbtn'}><a onClick={()=>{this.signout()}} style={{'color':'#75ce69', 'background-color': '#fff', 'margin-left':'5px', 'margin-right':'5px', }}>SIGN OUT</a></li>
+                        <li>
+                          <div id={'usrimg'} href={'#'} style={{'padding':'0px', 'margin':'0px 5px', }}>
+                            <img height={'50px'} src={this.state.profilepic} />
+                            <div className="usrimg-content">
+                              <ol>
+                                <li><a>page-1</a></li>
+                                <li><a>page-2</a></li>
+                                <li><a>page-3</a></li>
+                              </ol>
+                            </div>
+                          </div>
+                        </li>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -137,32 +255,41 @@ export default class IndexPage extends React.Component {
               <Col xs={'6'} md={'4'}><Grid fluid={true}><img className={'col-sm-3 tick'} src={'images/tick.png'} style={{'margin-top':'20px',}} /><h3><strong>Document & Legal cover</strong></h3></Grid><p>Providing you with complete legal cover and consultation through a certified legal firm, and preparing necessary paperwork for property transaction.</p></Col>
             </Grid>
             <div className={'container-fluid graded'} style={{'padding':'3vh 0vw 3vh 0vw', 'color':'white', 'margin-top':'50px', }}>
-                <Grid>
-                  <h1><strong>A Game Changer - In Real Estate Agency of Pakistan</strong></h1>
-                  <button className={'contact-btn'} onClick={() => this.setState({ show: true })}><strong>Contact Us</strong></button>
-                  <Modal show={this.state.show} onHide={close} container={this} aria-labelledby="contained-modal-title">
-                    <Modal.Header closeButton>
-                      <Modal.Title id="contained-modal-title">Fill up this form and we'll contact you shortly.</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                      <form id={'submitEmail'}>
-                        <input name={'email'} type={'email'}
-                          onChange={
-                            (email) => {
-                              this.setState({
-                                email: email.target.value
-                              })
-                            }
+              <Grid>
+                <h1><strong>A Game Changer - In Real Estate Agency of Pakistan</strong></h1>
+                <button className={'contact-btn'} onClick={()=>{this.chksignin()}}><strong>Contact Us</strong></button>
+                <Modal show={this.state.showAnonymous} onHide={closeAnonymous} container={this} aria-labelledby="AnonymousModal">
+                  <Modal.Header closeButton>
+                    <Modal.Title id="AnonymousModal">Fill up this form and we'll contact you shortly.</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <form id={'submitEmail'}>
+                      <input name={'email'} type={'email'}
+                        onChange={
+                          (email) => {
+                            this.setState({
+                              email: email.target.value
+                            })
                           }
-                        placeholder={'Email'} style={{'background-color':'#f0f0f0', 'padding':'10px 20px 10px 20px',}} />
-                        <button type={'button'} onClick={(e)=>{this.writeUserData(e)}} style={{'padding':'20px', 'background-color':'#e0e0e0', 'border':'none', 'border-radius':'0px',}}>Submit</button>
-                      </form>
-                    </Modal.Body>
-                    <Modal.Footer>
-                      <Button onClick={close}>Close</Button>
-                    </Modal.Footer>
-                  </Modal>
-                </Grid>
+                        }
+                      placeholder={'Email'} style={{'background-color':'#f0f0f0', 'padding':'10px 20px 10px 20px',}} />
+                      <button type={'button'} onClick={(e)=>{this.writeUserData(e)}} style={{'padding':'20px', 'background-color':'#e0e0e0', 'border':'none', 'border-radius':'0px',}}>Submit</button>
+                    </form>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button onClick={closeAnonymous}>Close</Button>
+                  </Modal.Footer>
+                </Modal>
+                <Modal show={this.state.showUsr} onHide={closeUsr} container={this} aria-labelledby="UsrModal">
+                  <Modal.Header closeButton>
+                    <Modal.Title id="UsrModal">We have your Email, We'll contact you shortly...</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body />
+                  <Modal.Footer>
+                    <Button onClick={closeUsr}>Close</Button>
+                  </Modal.Footer>
+                </Modal>
+              </Grid>
             </div>
           </section>
           <section style={{'margin':'0px 0px 0px 0px'}}></section>

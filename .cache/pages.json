@@ -7,18 +7,18 @@
         "path": "/dev-404-page/"
     },
     {
-        "componentChunkName": "component---src-pages-add-property-js",
-        "layout": "index",
-        "layoutComponentChunkName": "component---src-layouts-index-js",
-        "jsonName": "add-property.json",
-        "path": "/AddProperty/"
-    },
-    {
         "componentChunkName": "component---src-pages-404-js",
         "layout": "index",
         "layoutComponentChunkName": "component---src-layouts-index-js",
         "jsonName": "404.json",
         "path": "/404/"
+    },
+    {
+        "componentChunkName": "component---src-pages-add-property-js",
+        "layout": "index",
+        "layoutComponentChunkName": "component---src-layouts-index-js",
+        "jsonName": "add-property.json",
+        "path": "/AddProperty/"
     },
     {
         "componentChunkName": "component---src-pages-property-listings-js",

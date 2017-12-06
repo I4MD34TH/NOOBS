@@ -1,7 +1,7 @@
 import React from 'react'
 import RelativeListing from './RelativeListing'
 import { Grid, Col, Button, Modal, Row } from 'react-bootstrap'
-import firebase from 'firebase'
+import * as firebase from "firebase";
 
 export default class PropertyDetails extends React.Component {
   constructor (props) {
@@ -12,6 +12,24 @@ export default class PropertyDetails extends React.Component {
     console.log(firebase);
   }
   componentDidMount() {
+    var modal = document.getElementById('myModal');
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+      captionText.innerHTML = this.alt;
+    }
+    modal.onclick = function() {
+      img01.className += " out";
+      setTimeout(function() {
+        modal.style.display = "none";
+        img01.className = "modal-content";
+      }, 400);
+    }
+
     var database = firebase.database();
     var relativelistingsData = [
       {
@@ -34,7 +52,10 @@ export default class PropertyDetails extends React.Component {
       <Grid className={'details'} style={{'padding-top':'40px', 'padding-bottom':'40px', }}>
         <Col xs={12} md={4}>
           <Row style={{'padding':'5px', }}>
-            <img className={'img-responsive'} src={this.props.data.imgUrl[0]} />
+            <img id={"myImg"} className={'img-responsive'} src={this.props.data.imgUrl[0]} />
+            <div id={"myModal"} class={"modal"}>
+              <img class={"modal-content"} id={"img01"} />
+            </div>
           </Row>
           <Row>
             <Col xs={6} md={4} style={{'padding':'5px',}}><img className={'img-responsive'} src={this.props.data.imgUrl[1]} /></Col>
