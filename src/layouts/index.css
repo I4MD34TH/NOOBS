@@ -181,14 +181,11 @@ img.navbar-brand {
 .loc-tile, .dt {
     color: #999999;
 }
-.tile:hover, .tile:hover .loc-tile, .tile:hover .dt {
+.tile:hover {
     cursor: pointer;
-    background-color: #f6f6f6/*#72c173*/;
-    /*color: #fff;*/
-}
-.tile:hover .common-details {
-    /*filter: brightness(0) invert(1);
-    -webkit-filter: brightness(0) invert(1);*/
+    background-color: #f6f6f6;
+    transform: scale(1.02);
+    transition: 0.3s ease;
 }
 .inner-tile {
     margin: 0px 20px 0px 20px;
