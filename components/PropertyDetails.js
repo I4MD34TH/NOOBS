@@ -2,6 +2,8 @@ import React from 'react'
 import RelativeListing from './RelativeListing'
 import { Grid, Col, Button, Modal, Row } from 'react-bootstrap'
 import * as firebase from "firebase";
+import Slider from 'react-slick';
+
 
 export default class PropertyDetails extends React.Component {
   constructor (props) {
@@ -11,26 +13,12 @@ export default class PropertyDetails extends React.Component {
     }
     console.log(firebase);
   }
+  getInitialState = ()=> {
+    return { showCarousel: false };
+  }
   componentDidMount() {
-    var modal = document.getElementById('myModal');
-    var img = document.getElementById('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function(){
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      modalImg.alt = this.alt;
-      captionText.innerHTML = this.alt;
-    }
-    modal.onclick = function() {
-      img01.className += " out";
-      setTimeout(function() {
-        modal.style.display = "none";
-        img01.className = "modal-content";
-      }, 400);
-    }
-
     var database = firebase.database();
+
     var relativelistingsData = [
       {
         title: '12 Marla House for sale',
@@ -48,19 +36,22 @@ export default class PropertyDetails extends React.Component {
     })
   }
   render() {
+    var settings = {
+      slidesToShow: 1,
+      dots:true,
+      centerMode: true,
+    };
+    let closeCarousel = () => this.setState({ showCarousel: false, });
     return (
       <Grid className={'details'} style={{'padding-top':'40px', 'padding-bottom':'40px', }}>
         <Col xs={12} md={4}>
           <Row style={{'padding':'5px', }}>
-            <img id={"myImg"} className={'img-responsive'} src={this.props.data.imgUrl[0]} />
-            <div id={"myModal"} class={"modal"}>
-              <img class={"modal-content"} id={"img01"} />
-            </div>
+            <img className={'img-responsive bitfade'} onClick={()=>{this.setState({ showCarousel: true, });}} src={this.props.data.imgUrl[0]} />
           </Row>
           <Row>
-            <Col xs={6} md={4} style={{'padding':'5px',}}><img className={'img-responsive'} src={this.props.data.imgUrl[1]} /></Col>
-            <Col xs={6} md={4} style={{'padding':'5px',}}><img className={'img-responsive'} src={this.props.data.imgUrl[2]} /></Col>
-            <Col xs={6} md={4} style={{'padding':'5px',}}><img className={'img-responsive'} src={this.props.data.imgUrl[3]} /></Col>
+            <Col xs={6} md={4} style={{'padding':'5px',}}><img className={'img-responsive bitfade'} onClick={()=>{this.setState({ showCarousel: true, });}} src={this.props.data.imgUrl[1]} /></Col>
+            <Col xs={6} md={4} style={{'padding':'5px',}}><img className={'img-responsive bitfade'} onClick={()=>{this.setState({ showCarousel: true, });}} src={this.props.data.imgUrl[2]} /></Col>
+            <Col xs={6} md={4} style={{'padding':'5px',}}><img className={'img-responsive bitfade'} onClick={()=>{this.setState({ showCarousel: true, });}} src={this.props.data.imgUrl[3]} /></Col>
           </Row>
           <Row style={{'padding':'5px', }}>
             <Button className={'bkgrad'}><strong>CALL US FOR MORE DETAILS</strong></Button>
@@ -70,6 +61,16 @@ export default class PropertyDetails extends React.Component {
             <Col xs={6} md={4} style={{'padding':'5px',}}><Button className={'prop-btns'}>Share</Button></Col>
             <Col xs={6} md={4} style={{'padding':'5px',}}><Button className={'prop-btns'}>Add Notes</Button></Col>
           </Row>
+          <Modal show={this.state.showCarousel} onHide={closeCarousel} container={this} aria-labelledby="CarouselModal">
+            <Slider {...settings}>
+              <div><img className={'img-responsive'} src={this.props.data.imgUrl[0]} /></div>
+              <div><img className={'img-responsive'} src={this.props.data.imgUrl[1]} /></div>
+              <div><img className={'img-responsive'} src={this.props.data.imgUrl[2]} /></div>
+              <div><img className={'img-responsive'} src={this.props.data.imgUrl[3]} /></div>
+              <div><img className={'img-responsive'} src={this.props.data.imgUrl[4]} /></div>
+              <div><img className={'img-responsive'} src={this.props.data.imgUrl[5]} /></div>
+            </Slider>
+          </Modal>
         </Col>
         <Col xs={12} md={7} className={'marginprob'}>
           <Row>

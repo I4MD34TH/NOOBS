@@ -164,7 +164,7 @@ export default class PropertyPage extends React.Component {
     ]
     this.setState({
       listingDetails,
-    })
+    });
   }
   render() {
     let closeAnonymous = () => this.setState({ showAnonymous: false, });
