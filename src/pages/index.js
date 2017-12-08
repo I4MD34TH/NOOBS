@@ -35,14 +35,14 @@ export default class IndexPage extends React.Component {
   }
   writeUserData(e) {
     const database = firebase.database();
-    database.ref('users/').push({
+    database.ref('contact/').push({
       email: this.state.email,
     });
   }
   chksignin () {
     var usr = firebase.auth().currentUser;
     var usremail = usr.email;
-    var db = firebase.database().ref('users/');
+    var db = firebase.database().ref('contact/');
     if (usr == null) {
       this.setState({ showAnonymous: true, });
     } else {
@@ -153,7 +153,7 @@ export default class IndexPage extends React.Component {
         bed: 2,
         bath: 2,
         garage: 1,
-        imgUrl: 'https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/',
+        imgUrl: '../images/thumb-1.jpg',
       },
       {
         title: '10 Marla House for sale',
@@ -163,7 +163,7 @@ export default class IndexPage extends React.Component {
         bed: 3,
         bath: 3,
         garage: 0,
-        imgUrl: 'https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/',
+        imgUrl: '../images/thumb-2.jpg',
       },
       {
         title: '12 Marla House for sale',
@@ -173,7 +173,7 @@ export default class IndexPage extends React.Component {
         bed: 4,
         bath: 4,
         garage: 0,
-        imgUrl: 'https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/',
+        imgUrl: '../images/thumb-3.jpg',
       }
     ]
     this.setState({

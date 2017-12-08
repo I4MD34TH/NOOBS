@@ -96,14 +96,14 @@ export default class PropertyPage extends React.Component {
   }
   writeUserData(e) {
     const database = firebase.database();
-    database.ref('users/').push({
+    database.ref('contact/').push({
       email: this.state.email,
     });
   }
   chksignin () {
     var usr = firebase.auth().currentUser;
     var usremail = usr.email;
-    var db = firebase.database().ref('users/');
+    var db = firebase.database().ref('contact/');
     if (usr == null) {
       this.setState({ showAnonymous: true, });
     } else {

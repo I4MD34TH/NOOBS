@@ -23,12 +23,12 @@ export default class PropertyDetails extends React.Component {
       {
         title: '12 Marla House for sale',
         location: 'Dha 2',
-        imgUrl: 'https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/'
+        imgUrl: '../images/thumb-2.jpg'
       },
       {
         title: '12 Marla House for sale',
         location: 'Dha 2',
-        imgUrl: 'https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/'
+        imgUrl: '../images/thumb-3.jpg'
       }
     ]
     this.setState({

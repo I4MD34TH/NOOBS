@@ -20,6 +20,7 @@
     "react-scrollchor": "^4.0.0",
     "react-select": "^1.0.0-rc.10",
     "react-slick": "^0.15.4",
+    "searchkit": "^2.3.0",
     "slick-carousel": "^1.8.1"
   },
   "keywords": [

@@ -32,14 +32,14 @@ export default class PropertyPage extends React.Component {
   }
   writeUserData(e) {
     const database = firebase.database();
-    database.ref('users/').push({
+    database.ref('contact/').push({
       email: this.state.email,
     });
   }
   chksignin () {
     var usr = firebase.auth().currentUser;
     var usremail = usr.email;
-    var db = firebase.database().ref('users/');
+    var db = firebase.database().ref('contact/');
     if (usr == null) {
       this.setState({ showAnonymous: true, });
     } else {
@@ -147,7 +147,7 @@ export default class PropertyPage extends React.Component {
         build: '2015',
         age: '5 days',
         lastupdt: '04/13/2017 12:00 AM',
-        imgUrl: ['https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/','https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/','https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/','https://static1.squarespace.com/static/53690146e4b094e1f0fb2239/t/58fe960a197aea4f7f27993b/1493324448380/'],
+        imgUrl: ['../images/thumb-1.jpg','../images/thumb-2.jpg','../images/thumb-3.jpg','../images/thumb-2.jpg'],
         f1: '1250',
         f2: 'Central Heating',
         f3: 'Electricity',

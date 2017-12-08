@@ -7,6 +7,12 @@ export default class PropertyTile extends React.Component {
   render() {
     return (
         <a onClick={this.navigatedetails} style={{'cursor':'pointer', 'text-decoration':'none', 'color':'#666', }}>
+            <div class="snowflake1">❄</div>
+            <div class="snowflake2">❄</div>
+            <div class="snowflake3">❄</div>
+            <div class="snowflake4">❄</div>
+            <div class="snowflake5">❄</div>
+            <div class="snowflake6">❄</div>
             <img className={'img-responsive'} src={this.props.data.imgUrl} />
             <div className={'inner-tile'}>
                 <h3>{this.props.data.title}</h3>
